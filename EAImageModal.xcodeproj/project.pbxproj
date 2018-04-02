@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A74E0F0E20729233003E9DFA /* EAImageModal.h in Headers */ = {isa = PBXBuildFile; fileRef = A74E0F0C20729233003E9DFA /* EAImageModal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A74E0F1520729258003E9DFA /* ImageModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F1420729258003E9DFA /* ImageModal.swift */; };
+		A74E0F1520729258003E9DFA /* ImageModalIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F1420729258003E9DFA /* ImageModalIOS.swift */; };
 		A7E86EB520729CE900EB8788 /* ImageModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E86EB420729CE900EB8788 /* ImageModalView.swift */; };
 		A7E86EB720729CFC00EB8788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E86EB620729CFC00EB8788 /* Assets.xcassets */; };
 		A7E86ED62072A29600EB8788 /* Kingfisher.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A7E86EC62072A22C00EB8788 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -91,7 +91,7 @@
 		A74E0F0920729233003E9DFA /* EAImageModal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EAImageModal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74E0F0C20729233003E9DFA /* EAImageModal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAImageModal.h; sourceTree = "<group>"; };
 		A74E0F0D20729233003E9DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A74E0F1420729258003E9DFA /* ImageModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModal.swift; sourceTree = "<group>"; };
+		A74E0F1420729258003E9DFA /* ImageModalIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModalIOS.swift; sourceTree = "<group>"; };
 		A7E86EB420729CE900EB8788 /* ImageModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModalView.swift; sourceTree = "<group>"; };
 		A7E86EB620729CFC00EB8788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7E86EBB2072A22C00EB8788 /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = Kingfisher/Kingfisher.xcodeproj; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 			children = (
 				A74E0F0C20729233003E9DFA /* EAImageModal.h */,
 				A74E0F0D20729233003E9DFA /* Info.plist */,
-				A74E0F1420729258003E9DFA /* ImageModal.swift */,
+				A74E0F1420729258003E9DFA /* ImageModalIOS.swift */,
 				A7E86EB420729CE900EB8788 /* ImageModalView.swift */,
 				A7E86EB620729CFC00EB8788 /* Assets.xcassets */,
 			);
@@ -291,7 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A74E0F1520729258003E9DFA /* ImageModal.swift in Sources */,
+				A74E0F1520729258003E9DFA /* ImageModalIOS.swift in Sources */,
 				A7E86EB520729CE900EB8788 /* ImageModalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,6 +1,6 @@
 import Foundation
 
- public class ImageModal: NSObject {
+ public class ImageModalIOS: NSObject {
 
     var imageModalView : ImageModalView!
     
