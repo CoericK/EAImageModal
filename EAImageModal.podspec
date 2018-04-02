@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "EAImageModal"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "An easy to use modal that displays an image"
 
   # This description is used to generate tags and improve search results.
@@ -134,6 +134,6 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency 'Kingfisher', '~> 4.0'
 
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3' }
 
 end
