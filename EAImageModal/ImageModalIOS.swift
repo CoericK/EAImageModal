@@ -14,7 +14,7 @@ import Foundation
         self.imageModalView.setImageToShow(url: URL(string: url)!)
     }
     
-    public func setImage(url: String, _ cb: @escaping CBClosure) {
+    public func setImage(url: String, cb: @escaping CBClosure) {
         self.setImage(url: url)
         self.imageModalView.setCallback(cb);
     }
