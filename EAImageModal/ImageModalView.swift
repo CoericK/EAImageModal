@@ -3,9 +3,13 @@ import Kingfisher
 
 class ImageModalView: UIView {
     
+     public typealias CBClosure = ()->Void;
+    
     var contentView: UIView!
     var imageModal: UIImageView!
     var closeButton: UIButton!
+    var callbackOnClose: CBClosure!
+    
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,6 +23,10 @@ class ImageModalView: UIView {
     
     public func setImageToShow(url: URL ){
         self.imageModal.kf.setImage(with: url)
+    }
+    
+    public func setCallback(_ cb:@escaping CBClosure){
+        self.callbackOnClose = cb;
     }
     
     public func setUpView(){
@@ -92,6 +100,10 @@ class ImageModalView: UIView {
             self.contentView.alpha = 0.0
         }) { _ in
             self.removeFromSuperview()
+            if(self.callbackOnClose != nil){
+                self.callbackOnClose()
+            }
+            
         }
     }
     
