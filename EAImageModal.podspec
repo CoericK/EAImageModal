@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "EAImageModal"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "An easy to use modal that displays an image"
 
   # This description is used to generate tags and improve search results.
