@@ -9,6 +9,7 @@ class ImageModalView: UIView {
     var imageModal: UIImageView!
     var closeButton: UIButton!
     var callbackOnClose: CBClosure!
+    var bgAlpha : Float = 0.6
     
     
     public override init(frame: CGRect) {
@@ -29,11 +30,12 @@ class ImageModalView: UIView {
         self.callbackOnClose = cb;
     }
     
+    
     private func setUpView() {
 
         self.contentView = UIView()
         
-        self.contentView.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        self.contentView.backgroundColor = UIColor.black.withAlphaComponent(CGFloat(bgAlpha))
         addSubview(contentView)
         contentView.translatesAutoresizingMaskIntoConstraints = false
         self.addConstraint( NSLayoutConstraint(item: contentView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0))
@@ -72,7 +74,7 @@ class ImageModalView: UIView {
             self.contentView.transform = CGAffineTransform.identity
         })
     }
-    
+
     
     @objc private func removeSelf() {
         // Animate removal of view
