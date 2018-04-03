@@ -30,7 +30,7 @@ class ImageModalView: UIView {
     }
     
     public func setUpView(){
-        let bundle = Bundle(for: type(of: self))
+        //let bundle = Bundle(for: type(of: self))
         self.contentView = UIView()
         self.contentView.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         
@@ -76,8 +76,8 @@ class ImageModalView: UIView {
         self.closeButton.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: -20).isActive = true
         self.closeButton.widthAnchor.constraint(equalToConstant: 24).isActive = true
         self.closeButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
-        self.closeButton.setImage(UIImage(named: "ic_close_modal", in: bundle, compatibleWith: nil), for: .normal)
-        
+        //self.closeButton.setImage(UIImage(named: "ic_close_modal", in: bundle, compatibleWith: nil), for: .normal)
+        self.closeButton.setImage(UIImage(named: "ic_image_modal_close_button"), for: .normal)
         contentView.alpha = 0.0
         
     }
