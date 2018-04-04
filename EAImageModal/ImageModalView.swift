@@ -59,8 +59,17 @@ class ImageModalView: UIView {
         self.contentView.addSubview(self.closeButton)
         self.closeButton.addTarget(self, action: #selector(removeSelf), for: .touchUpInside)
         self.closeButton.translatesAutoresizingMaskIntoConstraints = false
-        self.contentView.addConstraint(NSLayoutConstraint(item: self.closeButton, attribute: .top, relatedBy: .equal, toItem: self.contentView, attribute: .top, multiplier: 1, constant :20))
-        self.contentView.addConstraint(NSLayoutConstraint(item: self.closeButton, attribute: .right, relatedBy: .equal, toItem: self.contentView, attribute: .right, multiplier: 1, constant :-20))
+    
+    
+        if #available(iOS 11.0, *), getDeviceName() == "iPhone X" {
+            self.closeButton.topAnchor.constraint(equalTo: self.contentView.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true 
+        }else{
+            self.contentView.addConstraint(NSLayoutConstraint(item: self.closeButton, attribute: .top, relatedBy: .equal, toItem: self.contentView, attribute: .top, multiplier: 1, constant :20))
+        }
+        
+        
+        
+        self.contentView.addConstraint(NSLayoutConstraint(item: self.closeButton, attribute: .right, relatedBy: .equal, toItem: self.contentView, attribute: .right, multiplier: 1, constant :-16))
         self.closeButton.addConstraint(NSLayoutConstraint(item: self.closeButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 24))
         self.closeButton.addConstraint(NSLayoutConstraint(item: self.closeButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 24))
         self.closeButton.setImage(UIImage(named: "ic_image_modal_close_button"), for: .normal)
@@ -73,6 +82,25 @@ class ImageModalView: UIView {
             self.contentView.alpha = 1
             self.contentView.transform = CGAffineTransform.identity
         })
+    }
+    
+    private func getDeviceName() -> String {
+        if UIDevice().userInterfaceIdiom == .phone {
+            switch UIScreen.main.nativeBounds.height {
+            case 1136:
+                return ("iPhone 5 or 5S or 5C")
+            case 1334:
+                return("iPhone 6/6S/7/8")
+            case 1920, 2208:
+                return("iPhone 6+/6S+/7+/8+")
+            case 2436:
+                return("iPhone X")
+            default:
+                return("unknown")
+            }
+        }else {
+            return "unknown"
+        }
     }
 
     
