@@ -1,6 +1,7 @@
 import Foundation
 import Kingfisher
 
+
 class ImageModalView: UIView {
     
      public typealias CBClosure = ()->Void;
@@ -23,6 +24,7 @@ class ImageModalView: UIView {
     }
     
     public func setImageToShow(url: URL ){
+        self.imageModal.kf.indicatorType = .activity
         self.imageModal.kf.setImage(with: url)
     }
     
@@ -62,9 +64,9 @@ class ImageModalView: UIView {
     
     
         if #available(iOS 11.0, *), getDeviceName() == "iPhone X" {
-            self.closeButton.topAnchor.constraint(equalTo: self.contentView.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true 
+            self.closeButton.topAnchor.constraint(equalTo: self.contentView.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
         }else{
-            self.contentView.addConstraint(NSLayoutConstraint(item: self.closeButton, attribute: .top, relatedBy: .equal, toItem: self.contentView, attribute: .top, multiplier: 1, constant :20))
+            self.contentView.addConstraint(NSLayoutConstraint(item: self.closeButton, attribute: .top, relatedBy: .equal, toItem: self.contentView, attribute: .top, multiplier: 1, constant :36))
         }
         
         
